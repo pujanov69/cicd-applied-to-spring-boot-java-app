@@ -15,9 +15,22 @@
 	<description>Implementing CI/CD on Spring Boot Java App</description>
 
 	<properties>
+	
+		<docker.image.prefix>pujanov69</docker.image.prefix>
+			
 		<java.version>1.8</java.version>
 		
+		<!-- solving error : Invalid or corrupt jarfile /app.jar -->
+      
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		
+		
 		<maven.deploy.skip>true</maven.deploy.skip>
+		
+		<!-- GitHub OAuth token & server -->
+		<github.global.server>github</github.global.server>
+        <github.global.oauth2Token>${env.GITHUB_OAUTH_TOKEN}</github.global.oauth2Token>
 		
 	</properties>
 
@@ -71,6 +84,7 @@
 	            </configuration>
         	</plugin>
         	
+        	     	
         	
 		</plugins>
 	</build>
