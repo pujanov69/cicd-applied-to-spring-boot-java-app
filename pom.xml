@@ -77,10 +77,10 @@
 					</execution>
 				</executions>
 	            <configuration>
-	                <repository>hub.docker.com/repository/docker/${docker.image.prefix}/${project.artifactId}</repository>
+	                <repository>${docker.image.prefix}/${project.artifactId}</repository>
 			
 	                <serverId>index.docker.io</serverId>
-	      		<registryUrl>https://index.docker.io:443/v1/</registryUrl>
+	      		<registryUrl>https://hub.docker.com/repository/docker/</registryUrl>
 	            </configuration>
         	</plugin>
         	
